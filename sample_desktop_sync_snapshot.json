@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-11-03T03:30:00Z",
+  "sourceDevice": "Desktop-Strapi-v5",
+  "accounts": [
+    {
+      "documentId": "acc_vn_equity",
+      "rawId": 1,
+      "name": "TCBS Cơ Sở Tăng Trưởng",
+      "description": "Danh mục cổ phiếu tăng trưởng HOSE/HNX",
+      "initialBalance": 500000000,
+      "cash": 220000000,
+      "margin": 0,
+      "currency": "VND",
+      "marketDocumentId": "mkt_vnstock",
+      "marketName": "VNStock",
+      "settingDocumentId": "set_vn_equity",
+      "setting": {
+        "documentId": "set_vn_equity",
+        "rawId": 1,
+        "name": "VNStock Growth Risk",
+        "riskPerTrade": 1.0,
+        "maxDrawDown": 8.0,
+        "capitalRisk": 15.0,
+        "accountDocumentId": "acc_vn_equity",
+        "updatedAt": "2026-11-03T03:00:00Z",
+        "isDirty": false
+      },
+      "strategyDocumentId": "strat_vcp_breakout",
+      "strategyName": "VCP Breakout + Volume Spike",
+      "volumeFormat": "0,0",
+      "moneyFormat": "0,0",
+      "feeRate": 0.15,
+      "sellTaxRate": 0.1,
+      "feePerContract": 0,
+      "maxPositionPct": 25,
+      "maxAverageDown": 1,
+      "timeframe": "D1",
+      "allocationJson": "{\"targetPct\":60}",
+      "updatedAt": "2026-11-03T03:00:00Z",
+      "isDirty": false
+    }
+  ],
+  "settings": [
+    {
+      "documentId": "set_vn_equity",
+      "rawId": 1,
+      "name": "VNStock Growth Risk",
+      "riskPerTrade": 1.0,
+      "maxDrawDown": 8.0,
+      "capitalRisk": 15.0,
+      "accountDocumentId": "acc_vn_equity",
+      "updatedAt": "2026-11-03T03:00:00Z",
+      "isDirty": false
+    }
+  ],
+  "markets": [],
+  "strategies": [
+    {
+      "documentId": "strat_vcp_breakout",
+      "rawId": 1,
+      "name": "VCP Breakout + Volume Spike",
+      "description": "Mua nền giá thu hẹp VCP vượt đỉnh kèm khối lượng > 1.5x MA20",
+      "type": "Rules",
+      "strategyFile": null,
+      "template": "VCP",
+      "updatedAt": "2026-11-03T03:00:00Z",
+      "isDirty": false
+    }
+  ],
+  "symbols": [
+    {
+      "documentId": "sym_fpt",
+      "rawId": 1,
+      "name": "FPT",
+      "description": "FPT Corp",
+      "exchange": "HOSE",
+      "shortName": "FPT",
+      "industry": "Công nghệ",
+      "sector": "Technology",
+      "marketDocumentId": "mkt_vnstock",
+      "lastClose": 138500,
+      "prevClose": 134200,
+      "lastVolume": 6800000,
+      "avgVolume20d": 4100000,
+      "ma20": 133000,
+      "lastPriceDate": "2026-11-03",
+      "updatedAt": "2026-11-03T03:00:00Z",
+      "isDirty": false
+    }
+  ],
+  "trades": [
+    {
+      "documentId": "trd_fpt_open_today",
+      "rawId": 101,
+      "type": "Long",
+      "tradeStatus": "ScaleIn",
+      "note": "Mua nền VCP FPT tại 131.5k, nhồi thêm 500 cổ khi vượt 136k.",
+      "date": "2026-10-31T02:30:00Z",
+      "accountDocumentId": "acc_vn_equity",
+      "symbolDocumentId": "sym_fpt",
+      "symbolName": "FPT",
+      "strategyDocumentId": "strat_vcp_breakout",
+      "strategyName": "VCP Breakout + Volume Spike",
+      "scored": 9,
+      "pnl": 9500000,
+      "forwardTest": false,
+      "backtest": false,
+      "marketSnapshotJson": null,
+      "tradeDetails": [
+        {
+          "documentId": "td_fpt_1",
+          "rawId": 1,
+          "tradeDocumentId": "trd_fpt_open_today",
+          "price": 131500,
+          "type": "Buy",
+          "volume": 1000,
+          "signal": "Entry",
+          "date": "2026-10-31T02:30:00Z",
+          "note": "Vị thế thăm dò tại nền chặt",
+          "createdAt": "2026-10-31T02:30:00Z",
+          "updatedAt": "2026-10-31T02:30:00Z",
+          "isDirty": false,
+          "isDeleted": false
+        },
+        {
+          "documentId": "td_fpt_2",
+          "rawId": 2,
+          "tradeDocumentId": "trd_fpt_open_today",
+          "price": 136000,
+          "type": "Buy",
+          "volume": 500,
+          "signal": "Entry",
+          "date": "2026-11-03T02:15:00Z",
+          "note": "Gia tăng tỷ trọng (Pyramid)",
+          "createdAt": "2026-11-03T02:15:00Z",
+          "updatedAt": "2026-11-03T02:15:00Z",
+          "isDirty": false,
+          "isDeleted": false
+        }
+      ],
+      "createdAt": "2026-10-31T02:30:00Z",
+      "updatedAt": "2026-11-03T02:15:00Z",
+      "isDirty": false,
+      "isDeleted": false
+    }
+  ],
+  "plans": [],
+  "roadmaps": [],
+  "allocationSnapshots": [],
+  "deletedTradeDocumentIds": [],
+  "deletedTradeDetailDocumentIds": [],
+  "deletedPlanDocumentIds": [],
+  "deletedRoadmapDocumentIds": []
+}
+
