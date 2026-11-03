@@ -1,0 +1,34 @@
+# Xcode / iOS
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Node / Local Sync Exports
+node_modules/
+tradingjournal_sync_*.json
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
